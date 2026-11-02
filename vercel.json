@@ -5,3 +5,11 @@
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://domain-backend-express-anda.com/api/:path*"
+    }
+  ]
+}

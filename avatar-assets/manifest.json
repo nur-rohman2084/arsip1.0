@@ -1,0 +1,184 @@
+{
+ "canvas": {
+  "w": 320,
+  "h": 450
+ },
+ "skins": [
+  "gelap",
+  "pucat",
+  "sawo",
+  "sawo-muda",
+  "sawo-tua",
+  "terang"
+ ],
+ "items": [
+  {
+   "id": "hair_rambut-coklat-pendek",
+   "cat": "hair",
+   "name": "rambut-coklat-pendek",
+   "file": "items/hair_rambut-coklat-pendek.png",
+   "w": 79,
+   "h": 66
+  },
+  {
+   "id": "hair_rambut-kuning-spiky",
+   "cat": "hair",
+   "name": "rambut-kuning-spiky",
+   "file": "items/hair_rambut-kuning-spiky.png",
+   "w": 70,
+   "h": 58
+  },
+  {
+   "id": "hair_rambut-coklat-bob",
+   "cat": "hair",
+   "name": "rambut-coklat-bob",
+   "file": "items/hair_rambut-coklat-bob.png",
+   "w": 66,
+   "h": 64
+  },
+  {
+   "id": "hair_rambut-hitam",
+   "cat": "hair",
+   "name": "rambut-hitam",
+   "file": "items/hair_rambut-hitam.png",
+   "w": 68,
+   "h": 61
+  },
+  {
+   "id": "hair_rambut-coklat-kuncir",
+   "cat": "hair",
+   "name": "rambut-coklat-kuncir",
+   "file": "items/hair_rambut-coklat-kuncir.png",
+   "w": 67,
+   "h": 101
+  },
+  {
+   "id": "hair_rambut-auburn-kepang",
+   "cat": "hair",
+   "name": "rambut-auburn-kepang",
+   "file": "items/hair_rambut-auburn-kepang.png",
+   "w": 73,
+   "h": 95
+  },
+  {
+   "id": "hair_rambut-merah",
+   "cat": "hair",
+   "name": "rambut-merah",
+   "file": "items/hair_rambut-merah.png",
+   "w": 58,
+   "h": 66
+  },
+  {
+   "id": "top_kaos-navy",
+   "cat": "top",
+   "name": "kaos-navy",
+   "file": "items/top_kaos-navy.png",
+   "w": 88,
+   "h": 65
+  },
+  {
+   "id": "top_hoodie-biru",
+   "cat": "top",
+   "name": "hoodie-biru",
+   "file": "items/top_hoodie-biru.png",
+   "w": 83,
+   "h": 72
+  },
+  {
+   "id": "top_kaos-hijau",
+   "cat": "top",
+   "name": "kaos-hijau",
+   "file": "items/top_kaos-hijau.png",
+   "w": 78,
+   "h": 65
+  },
+  {
+   "id": "top_kemeja-kotak",
+   "cat": "top",
+   "name": "kemeja-kotak",
+   "file": "items/top_kemeja-kotak.png",
+   "w": 77,
+   "h": 70
+  },
+  {
+   "id": "top_armor-besi",
+   "cat": "top",
+   "name": "armor-besi",
+   "file": "items/top_armor-besi.png",
+   "w": 86,
+   "h": 70
+  },
+  {
+   "id": "top_jaket-coklat",
+   "cat": "top",
+   "name": "jaket-coklat",
+   "file": "items/top_jaket-coklat.png",
+   "w": 79,
+   "h": 69
+  },
+  {
+   "id": "top_mantel-olive",
+   "cat": "top",
+   "name": "mantel-olive",
+   "file": "items/top_mantel-olive.png",
+   "w": 75,
+   "h": 79
+  },
+  {
+   "id": "acc_headphone-merah",
+   "cat": "acc",
+   "name": "headphone-merah",
+   "file": "items/acc_headphone-merah.png",
+   "w": 82,
+   "h": 71
+  },
+  {
+   "id": "acc_headphone-abu",
+   "cat": "acc",
+   "name": "headphone-abu",
+   "file": "items/acc_headphone-abu.png",
+   "w": 80,
+   "h": 71
+  },
+  {
+   "id": "acc_ransel-hijau",
+   "cat": "acc",
+   "name": "ransel-hijau",
+   "file": "items/acc_ransel-hijau.png",
+   "w": 68,
+   "h": 77
+  },
+  {
+   "id": "acc_syal-kotak",
+   "cat": "acc",
+   "name": "syal-kotak",
+   "file": "items/acc_syal-kotak.png",
+   "w": 72,
+   "h": 67
+  },
+  {
+   "id": "acc_kacamata-oranye",
+   "cat": "acc",
+   "name": "kacamata-oranye",
+   "file": "items/acc_kacamata-oranye.png",
+   "w": 82,
+   "h": 30
+  },
+  {
+   "id": "acc_tas-coklat",
+   "cat": "acc",
+   "name": "tas-coklat",
+   "file": "items/acc_tas-coklat.png",
+   "w": 59,
+   "h": 52
+  },
+  {
+   "id": "acc_jam-tangan",
+   "cat": "acc",
+   "name": "jam-tangan",
+   "file": "items/acc_jam-tangan.png",
+   "w": 43,
+   "h": 44
+  }
+ ]
+}

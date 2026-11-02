@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: #07122f;
+}
+
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+body {
+  margin: 0;
+  background: #07122f;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+.hd {
+  font-family: 'Lilita One', 'Trebuchet MS', sans-serif;
+  letter-spacing: .01em;
+}
+
+.gb {
+  background: #ffc82c;
+  color: #2a1d00;
+  font-family: 'Lilita One', 'Trebuchet MS', sans-serif;
+  box-shadow: 0 4px 0 #b3830f, 0 6px 12px rgba(0,0,0,.35);
+  border-radius: 14px;
+  transition: transform .1s, background-color .15s;
+}
+
+.gb:hover {
+  background: #ffd252;
+}
+
+.gb:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #b3830f;
+}
+
+.gb:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 0 #b3830f;
+}
+
+.gy {
+  background: #5a6fa8;
+  color: #e6ecff;
+  font-family: 'Lilita One', sans-serif;
+  box-shadow: 0 4px 0 #3a4a7a;
+  border-radius: 14px;
+  transition: transform .1s;
+}
+
+.gy:hover {
+  background: #6a7fb8;
+}
+
+.gy:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #3a4a7a;
+}
+
+.pn {
+  background: rgba(16, 32, 80, .8);
+  border: 1px solid rgba(70, 105, 190, .5);
+  border-radius: 18px;
+  backdrop-filter: blur(4px);
+}
+
+.pd {
+  background: rgba(6, 14, 42, .8);
+  border: 1px solid rgba(60, 95, 180, .45);
+  border-radius: 16px;
+}
+
+.ol {
+  -webkit-text-stroke: 7px #2f3f8c;
+  paint-order: stroke fill;
+  color: #e3e9ff;
+  text-shadow: 0 4px 0 #1b2560;
+}
+
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #ffc82c;
+  outline-offset: 2px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #cert, #cert * {
+    visibility: visible;
+  }
+  #cert {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    max-width: 650px;
+    height: fit-content;
+    box-shadow: none;
+  }
+}

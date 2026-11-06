@@ -1,29 +1,40 @@
-const path = require('path');
-const fs = require('fs');
+let app;
 
-// 1. Impor aplikasi Express dari folder server
-const app = require('../server/src/app');
+function getApp() {
+  if (app) return app;
 
-// 2. Handler otomatis untuk meletakkan DB SQLite di folder /tmp Vercel saat Cold Start
-try {
-  const tmpDbPath = '/tmp/database.sqlite';
-  const originalDbPath = path.join(__dirname, '../server/src/db/database.sqlite');
-
-  // Salin file DB ke /tmp jika belum ada di lingkungan serverless
-  if (!fs.existsSync(tmpDbPath) && fs.existsSync(originalDbPath)) {
-    fs.copyFileSync(originalDbPath, tmpDbPath);
-  }
-
+  // Loading the Express app initializes the database schema.
+  const expressApp = require('../server/src/app');
   const db = require('../server/src/db/database');
-  const count = db.prepare('SELECT count(*) as c FROM users').get()?.c || 0;
-  
-  if (count === 0) {
-    const seed = require('../server/src/db/seed');
-    seed();
+
+  // Seed demo records once when the serverless database is empty.
+  const userCount = db.prepare('SELECT COUNT(*) AS count FROM users').get().count;
+  if (userCount === 0) {
+    const seedDatabase = require('../server/src/db/seed');
+    seedDatabase();
   }
-} catch (e) {
-  console.warn('Vercel cold-start auto-seed notice:', e.message);
+
+  app = expressApp;
+  return app;
 }
 
-// 3. Export sebagai Vercel Serverless Function
-module.exports = app;
+module.exports = (req, res) => {
+  try {
+    const handler = getApp();
+    return handler(req, res);
+  } catch (error) {
+    console.error('[Archive Academy] API bootstrap failed:', error);
+
+    if (res.headersSent) {
+      return res.end();
+    }
+
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json; charset=utf-8');
+    return res.end(JSON.stringify({
+      success: false,
+      message: 'API gagal diinisialisasi.',
+      error: error && error.message ? error.message : 'Unknown bootstrap error'
+    }));
+  }
+};

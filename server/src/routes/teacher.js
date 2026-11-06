@@ -3,12 +3,17 @@ const router = express.Router();
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 const readline = require('readline');
 const bcrypt = require('bcryptjs');
 const db = require('../db/database');
 const { verifyToken, requireRole } = require('../middleware/auth');
 
-const upload = multer({ dest: path.join(__dirname, '../../data/uploads/') });
+// Vercel serverless filesystem is read-only except for the temporary directory.
+// CSV uploads are processed during the request, so store temporary files under /tmp.
+const uploadDir = path.join(os.tmpdir(), 'archive-academy-uploads');
+fs.mkdirSync(uploadDir, { recursive: true });
+const upload = multer({ dest: uploadDir });
 
 // Teacher protection for all routes
 router.use(verifyToken, requireRole('guru'));
